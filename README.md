@@ -1,22 +1,32 @@
-# Desafio fundamentos de la programacion.
+![alt](/assets/img/encuentra-tu-superhero.png)
+# SuperHero 
 
-### Lo primero que se realizo es acomodar el entorno de trabajo, incorporando los CDN con los que se trabajaran, en este caso se incorporo bootstrap, script de javascript, los respectivos script de bootstrap, script de jquery, script de canvas.
+Este proyecto es una aplicación web que permite a los usuarios buscar información detallada sobre superhéroes utilizando la API de SuperHero. Proporciona datos como nombre, ocupación, primera aparición, conexiones, y estadísticas clave del superhéroe, las cuales se presentan en un gráfico de pastel.
 
-### Se hace primero la estructura, a la cual se le dara la logica, se hicieron los estilos segun la imagen de referencia a seguir.
+## Descripción
 
-### En el input se trabajo con la validacion de la informacion para que el usuario no pudiera ingresas numeros negativos, letras o cualquier otro cararter que no fueran numeros positivos
+La aplicación permite a los usuarios ingresar el número de un superhéroe en un campo de texto y realizar una búsqueda para obtener información detallada sobre él. Los resultados se muestran en una tarjeta con detalles específicos y un gráfico interactivo que visualiza las estadísticas del superhéroe.
 
-### Se crea una variable con .value(), que es un metodo utilizado en javascript el cual guarda la informacion de un input en una variable, a esta variable la llamamos inputValue
+## Tecnologías Utilizadas
 
-### Al final de la url agregamos el numero que la persona solicita, lo hicimos de la siguiente manera https://superheroapi.com/api.php/3033707663582647/${inputValue}, de esta manera aseguramos que el numero al final de la url sera el numero ingresado en el input.
+- **HTML5**: Para la estructura básica del sitio.
+- **CSS3**: Para los estilos y diseño responsivo.
+- **JavaScript (jQuery)**: Para la interactividad y manipulación del DOM.
+- **Bootstrap 5**: Para el diseño y componentes responsivos.
+- **CanvasJS**: Para la creación de gráficos interactivos.
+- **SuperHero API**: Para obtener los datos de los superhéroes.
 
-### Nos guiamos por la estructura que se nos brindo en el bootcamp para consumir una api, este daria succes si la respuesta era valida y error si la respuesta era invalida.
+## Funcionalidades
 
-### una vez que se tiene la respuesta valida guardamos en una variable la informacion que queremos mostrar, en este caso una carta de bootstrap con las diferentes estadisticas del superhero, se coloco un div en el html para contener toda la informacion.  $("#card-hero").html(postCard);
+- **Búsqueda por ID**: Los usuarios pueden ingresar el ID de un superhéroe para buscar su información.
+- **Visualización de Detalles**: La aplicación muestra información detallada sobre el superhéroe, incluyendo su nombre, ocupación, y más.
+- **Gráfico de Estadísticas**: Se utiliza un gráfico de pastel para visualizar las estadísticas del superhéroe, como fuerza, inteligencia, velocidad, entre otras.
 
-### luego se busca en canvas una forma forma de mostrar los porcentajes de poderes en una grafica tipo pie de porcentajes, se copio literalmente todos los datos del grafico, incuyendo su contenedor para el html. como la tabla solicita numeros enteros, creamos un objeto usando parseint para convertir los numeros de string a numeros reales,a esta variable se le llamo estadisticas :   const stats = {durability: parseInt(post.powerstats.durability) ,speed: parseInt(post.powerstats.speed),strength: parseInt(post.powerstats.strength),intelligence: parseInt(post.powerstats.intelligence), combat: parseInt(post.powerstats.combat), power: parseInt(post.powerstats.power),};
+## Estructura del Proyecto
 
-###  una vez obtenidos los datos en numeros reales simplemente se le agregaron a la grafica en el lugar correspondiente y con ello esta funcionaria correctamente.
+- **index.html**: Página principal que contiene la estructura HTML.
+- **assets/css**: Carpeta que contiene los archivos CSS.
+- **assets/js**: Carpeta que contiene los scripts JavaScript.
+- **assets/img**: Carpeta que contiene las imágenes utilizadas en el proyecto.
 
-### Habian ciertos errores en la api, algunos datos  no cargaban por falta de informacion, se utilizo la inteligencia artificial para ayudarme a entender como resolver dicho problema.  fue un reto para mi entender esta parte
- 
+
